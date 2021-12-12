@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Start your development with a Dashboard for Bootstrap 4.">
+  <meta name="author" content="Creative Tim">
+  <title>Breast Cancer Test Page</title>
+  <!-- Favicon -->
+  <link rel="icon" href="../assets/img/brand/favicon.png" type="image/png">
+  <!-- Fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">
+  <!-- Icons -->
+  <link rel="stylesheet" href="../assets/vendor/nucleo/css/nucleo.css" type="text/css">
+  <link rel="stylesheet" href="../assets/vendor/@fortawesome/fontawesome-free/css/all.min.css" type="text/css">
+  <!-- Page plugins -->
+  <!-- Argon CSS -->
+  <link rel="stylesheet" href="/static/argon.css?v=1.2.0" type="text/css">
+</head>
+
+<body>
+  <!-- Sidenav -->
+  <nav id="navbar-main" class="navbar navbar-horizontal navbar-transparent navbar-main navbar-expand-lg navbar-light">
+    <div class="container">
+      <!-- <a class="navbar-brand" href="dashboard.html">
+        <img src="../assets/img/brand/white.png">
+      </a> -->
+      <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button> -->
+      <div class="navbar-collapse navbar-custom-collapse collapse" id="navbar-collapse">
+        <div class="navbar-collapse-header">
+          <div class="row">
+            <div class="col-6 collapse-brand">
+              <a href="dashboard.html">
+              </a>
+            </div>
+            <div class="col-6 collapse-close">
+              <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+              </button>
+            </div>
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" href="dashboard.html">
+                  <i class="ni ni-tv-2 text-primary"></i>
+                  <span class="nav-link-text">Dashboard</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="ward.html">
+                  <i class="ni ni-planet text-orange"></i>
+                  <span class="nav-link-text">Classification of ward</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="daignosis.html">
+                  <i class="ni ni-pin-3 text-primary"></i>
+                  <span class="nav-link-text">Daignosis Suggestion</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="image.html">
+                  <i class="ni ni-single-02 text-yellow"></i>
+                  <span class="nav-link-text">Image Recognition</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="bed.html">
+                  <i class="ni ni-bullet-list-67 text-default"></i>
+                  <span class="nav-link-text">Bed Availability</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="patient search.html">
+                  <i class="ni ni-key-25 text-info"></i>
+                  <span class="nav-link-text">Patient History</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>    
+        <div class="scrollbar-inner">
+      <!-- Brand -->
+     
+      
+          </ul>
+        </div>
+      </div>
+      <div style="justify-content: center;float: left;">
+        <p style="padding-right: 70vh; font-weight: bolder; color: white; font-size: 20px;">Kindly Care</p>
+      </div>
+    </div>
+    
+  </nav>
+  <!-- Main content -->
+  <div class="main-content" id="panel">
+    <!-- Topnav -->
+    <nav class="navbar navbar-top navbar-expand navbar-dark bg-primary border-bottom">
+      <div class="container-fluid">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <!-- Search form -->
+          <!-- <form class="navbar-search navbar-search-light form-inline mr-sm-3" id="navbar-search-main">
+            <div class="form-group mb-0">
+              <div class="input-group input-group-alternative input-group-merge">
+                <div class="input-group-prepend">
+                  <span class="input-group-text"><i class="fas fa-search"></i></span>
+                </div>
+                <input class="form-control" placeholder="Search" type="text">
+              </div>
+            </div>
+            <button type="button" class="close" data-action="search-close" data-target="#navbar-search-main" aria-label="Close">
+              <span aria-hidden="true">×</span>
+            </button>
+          </form> -->
+          <!-- Navbar links -->
+            
+        </div>
+      </div>
+      <br>
+    </nav>
+
+    <br>
+    <div style="margin-left: 10px;"><a href="hospital_home">Home</a> / Breast Cancer Diagnosis
+    <div class="card-body">
+      <form action="{{url_for('cancer_diagnosis')}}" method="POST">
+        <h6 class="heading-small text-muted mb-4">Breast Cancer Parameters</h6>	 
+        <div class="pl-lg-">
+          <div class="row">
+            <div class="col-lg-4">
+              <div class="form-group">
+                <label class="form-control-label" for="input-username" >Radius mean	</label>
+                <input type="text" id="input-username" class="form-control" placeholder="Mean of distances from center to points on the perimeter	"  name="Radiusmean">
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="form-group">
+                <label class="form-control-label" for="input-email">Texture mean</label>
+                <input type="text" id="input-email" class="form-control" placeholder="Standard deviation of gray-scale values" name="Texturemean">
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="form-group">
+                <label class="form-control-label" for="input-email">Perimeter mean</label>
+                <input type="text" id="input-email" class="form-control" placeholder="Perimeter mean" name="Perimetermean">
+              </div>
+            </div>
+          </div>
+          <div class="row">            		
+            <div class="col-lg-4">
+              <div class="form-group">
+                <label class="form-control-label" for="input-first-name">Area mean</label>
+                <input type="text" id="input-first-name" class="form-control" placeholder="Area mean"  name="Areamean">
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="form-group">
+                <label class="form-control-label" for="input-last-name">Smoothness mean </label>
+                <input type="text" id="input-last-name" class="form-control" placeholder="Local variation in radius lengths"  name="Smoothnessmean">
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="form-group">
+                <label class="form-control-label" for="input-last-name">Compactness mean</label>
+                <input type="text" id="input-last-name" class="form-control" placeholder="Perimeter^2 / area - 1.0"  name="Compactnessmean">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">	      
+          <div class="col-lg-4">
+            <div class="form-group">
+              <label class="form-control-label" for="input-first-name">Concavity mean</label>
+              <input type="text" id="input-first-name" class="form-control" placeholder="Severity of concave portions of the contour " name="Concavitymean">
+            </div>
+          </div>
+          <div class="col-lg-4">
+          <div class="form-group">
+            <label class="form-control-label" for="input-first-name"> Concave</label>
+            <input type="text" id="input-first-name" class="form-control" placeholder="Number of concave portions of the contour "  name="Concave">
+          </div>
+        </div>
+        <!--1-->
+        <div class="col-lg-4">
+          <div class="form-group">
+            <label class="form-control-label" for="input-last-name">Fractal dimension worst</label>
+            <input type="text" id="input-last-name" class="form-control" placeholder="Fractal dimension worst" name="Fractaldimensionworst">
+          </div>
+        </div>
+    </div>
+  </div>
+  <div class="pl-lg-" style="margin-left: 25px;margin-right: 25px;">
+    <div class="row">
+      <div class="col-lg-4">
+        <div class="form-group">
+          <label class="form-control-label" for="input-username" > Symmetry mean</label>
+          <input type="text" id="input-username" class="form-control" placeholder="Symmetry mean"  name="Symmetrymean">
+        </div>
+      </div>
+      <div class="col-lg-4">          
+        <div class="form-group">
+          <label class="form-control-label" for="input-email">Fractal dimension mean</label>
+          <input type="text" id="input-email" class="form-control" placeholder="Coastline approximation - 1" name="Fractaldimensionmean">
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="form-group">
+          <label class="form-control-label" for="input-email">	Radius se</label>
+          <input type="text" id="input-email" class="form-control" placeholder="Radius se" name="Radiusse"  > </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-4">
+        <div class="form-group">
+          <label class="form-control-label" for="input-first-name">	Texture se</label>
+          <input type="text" id="input-first-name" class="form-control" placeholder="Texture se" name="Texturese">
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="form-group">        			
+          <label class="form-control-label" for="input-last-name">Perimeter se</label>
+          <input type="text" id="input-last-name" class="form-control" placeholder="Perimeter se"  name="Perimeterse">
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="form-group">
+          <label class="form-control-label" for="input-first-name">Area se</label>
+          <input type="text" id="input-first-name" class="form-control" placeholder="Area se " name="Arease">
+          </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row" style="margin: 10px;">
+
+    <div class="col-lg-4">
+      <div class="form-group">
+        <label class="form-control-label" for="input-first-name">Smoothness se</label>
+        <input type="text" id="input-first-name" class="form-control" placeholder="Smoothness se "  name="Smoothnessse">  
+      </div>
+    </div>
+    <div class="col-lg-4">
+    <div class="form-group">
+      <label class="form-control-label" for="input-first-name">Compactness se</label>
+      <input type="text" id="input-first-name" class="form-control" placeholder="Compactness se "  name="Compactnessse">  
+    </div>
+  </div>
+  <div class="col-lg-4">	
+  <div class="form-group">
+    <label class="form-control-label" for="input-username" >Concavity se</label>
+    <input type="text" id="input-username" class="form-control" placeholder="Concavity se"  name="Concavityse">
+  </div>
+</div>
+</div>
+</div>
+<div class="pl-lg-" style="margin: 25px;">
+  <div class="row">
+    <div class="col-lg-4">
+      <div class="form-group">
+        <label class="form-control-label" for="input-email">Concave</label>
+        <input type="text" id="input-email" class="form-control" placeholder="Concave" name="Concave">
+      </div>
+    </div>
+    <!--2-->
+    <div class="col-lg-4">
+      <div class="form-group">
+        <label class="form-control-label" for="input-last-name">Symmetry worst</label>
+        <input type="text" id="input-last-name" class="form-control" placeholder="Symmetry worst" name="Symmetryworst">
+      </div>
+    </div>
+    <div class="col-lg-4">
+      <div class="form-group">
+        <label class="form-control-label" for="input-first-name">	Symmetry se</label>
+        <input type="text" id="input-first-name" class="form-control" placeholder="Symmetry se" name="	Symmetryse">
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-4">
+      <div class="form-group">
+        <label class="form-control-label" for="input-last-name">Fractal dimension se</label>
+        <input type="text" id="input-last-name" class="form-control" placeholder="Fractal dimension se"  name="	Fractaldimensionse">		
+      </div>
+    </div>
+    <div class="col-lg-4">
+      <div class="form-group">
+        <label class="form-control-label" for="input-last-name">Radius worst</label>
+        <input type="text" id="input-last-name" class="form-control" placeholder="Radius worst"  name="Radiusworst">
+      </div>
+    </div>
+    <div class="col-lg-4">
+      <div class="form-group">
+        <label class="form-control-label" for="input-first-name">Texture worst</label>
+        <input type="text" id="input-first-name" class="form-control" placeholder="Texture worst "  name="Textureworst">  
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row" style="margin: 10px;">
+
+  <div class="col-lg-4">
+    <div class="form-group">
+      <label class="form-control-label" for="input-first-name">Perimeter worst</label>
+      <input type="text" id="input-first-name" class="form-control" placeholder="Perimeter worst "  name="Perimeterworst">  
+    </div>
+  </div>
+  <div class="col-lg-4">
+  <div class="form-group">
+    <label class="form-control-label" for="input-first-name">	Area worst</label>
+    <input type="text" id="input-first-name" class="form-control" placeholder="Area worst "  name="	Areaworst">  
+  </div>
+</div>
+<div class="col-lg-4">
+<div class="form-group">							
+  <label class="form-control-label" for="input-username" > Smoothness worst</label>
+  <input type="text" id="input-username" class="form-control" placeholder="Smoothness worst"  name="Smoothnessworst">
+
+</div>
+</div>
+</div>
+</div>
+<div class="pl-lg-" style="margin: 25px;">
+  <div class="row">
+    <div class="col-lg-4">
+      <div class="form-group">
+        <label class="form-control-label" for="input-email">Compactness worst</label>
+        <input type="text" id="input-email" class="form-control" placeholder="Compactness worst" name="Compactnessworst">
+      </div>
+    </div>
+    <div class="col-lg-4">
+      <div class="form-group">
+        <label class="form-control-label" for="input-email">Concavity worst</label>
+        <input type="text" id="input-email" class="form-control" placeholder="Concavity worst" name="Concavityworst">
+      </div>
+    </div>
+    <div class="col-lg-4">
+      <div class="form-group">
+        <label class="form-control-label" for="input-first-name">	Concave </label>
+        <input type="text" id="input-first-name" class="form-control" placeholder="Concave"  name="Concave">
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    
+    
+  </div>
+</div>
+
+
+    <hr class="my-4" />
+ 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+        
+        <input type="submit" value="Submit" style="justify-content: center;background-color: rgb(125, 119, 201); border-radius: 10px; box-shadow:2px 4px cadetblue; border: none; padding: 5px;padding-left: 15px;padding-right: 15px;"> 
+
+        <hr class="my-4" />
+  </form>
+
+  
+    <!-- Header -->
+    <!-- Header -->
+    <div style="margin-left: 550px; padding-bottom: 30px;"> <br> Result of the Test : <b>{{data}}</b> </div>
+  <!-- Argon Scripts -->
+  <!-- Core -->
+  <script src="../assets/vendor/jquery/dist/jquery.min.js"></script>
+  <script src="../assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/vendor/js-cookie/js.cookie.js"></script>
+  <script src="../assets/vendor/jquery.scrollbar/jquery.scrollbar.min.js"></script>
+  <script src="../assets/vendor/jquery-scroll-lock/dist/jquery-scrollLock.min.js"></script>
+  <!-- Optional JS -->
+  <script src="../assets/vendor/chart.js/dist/Chart.min.js"></script>
+  <script src="../assets/vendor/chart.js/dist/Chart.extension.js"></script>
+  <!-- Argon JS -->
+  <script src="../assets/js/argon.js?v=1.2.0"></script>
+</body>
+
+</html>

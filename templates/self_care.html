@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Start your development with a Dashboard for Bootstrap 4.">
+  <meta name="author" content="Creative Tim">
+  <title>Interim Self Care</title>
+  <!-- Favicon -->
+  <link rel="icon" href="../assets/img/brand/favicon.png" type="image/png">
+  <!-- Fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">
+  <!-- Icons -->
+  <link rel="stylesheet" href="/vendor/nucleo/css/nucleo.css" type="text/css">
+  <link rel="stylesheet" href="/vendor/@fortawesome/fontawesome-free/css/all.min.css" type="text/css">
+  <!-- Page plugins -->
+  <!-- Argon CSS -->
+  <link rel="stylesheet" href="/static/argon.css?v=1.2.0" type="text/css">
+</head>
+
+<body>
+  <!-- Sidenav -->
+  <nav id="navbar-main" class="navbar navbar-horizontal navbar-transparent navbar-main navbar-expand-lg navbar-light">
+    <div class="container">
+      <!-- <a class="navbar-brand" href="dashboard.html">
+        <img src="../assets/img/brand/white.png">
+      </a> -->
+       
+      </button>
+      <div class="navbar-collapse navbar-custom-collapse collapse" id="navbar-collapse">
+        <div class="navbar-collapse-header">
+          <div class="row">
+            <div class="col-6 collapse-brand">
+              <a href="dashboard.html">
+              </a>
+            </div>
+            <div class="col-6 collapse-close">
+              <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+              </button>
+            </div>
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" href="dashboard.html">
+                  <i class="ni ni-tv-2 text-primary"></i>
+                  <span class="nav-link-text">Dashboard</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="selfcare.html">
+                  <i class="ni ni-planet text-orange"></i>
+                  <span class="nav-link-text">Interim Self-care</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="consultation.html">
+                  <i class="ni ni-pin-3 text-primary"></i>
+                  <span class="nav-link-text">Online consultation</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="profile.html">
+                  <i class="ni ni-single-02 text-yellow"></i>
+                  <span class="nav-link-text">Profile</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="nearby.html">
+                  <i class="ni ni-bullet-list-67 text-default"></i>
+                  <span class="nav-link-text">Nearby Clinic/Hospital</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="history.html">
+                  <i class="ni ni-key-25 text-info"></i>
+                  <span class="nav-link-text">Patient History</span>
+                </a>
+              </li>
+              
+            </ul>
+          </div>
+        </div>    
+        <div class="scrollbar-inner">
+      <!-- Brand -->
+     
+      
+          </ul>
+        </div>
+      </div>
+      <div style="justify-content: center;float: left;">
+        <p style="padding-left: 100px; font-weight: bolder; color: white; font-size: 20px;">Kindly Care</p>
+      </div>
+    </div>
+    
+  </nav>
+  <!-- Main content -->
+  <div class="main-content" id="panel">
+    <!-- Topnav -->
+    <nav class="navbar navbar-top navbar-expand navbar-dark bg-primary border-bottom">
+      <div class="container-fluid">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <!-- Search form -->
+          <form class="navbar-search navbar-search-light form-inline mr-sm-3" id="navbar-search-main">
+            <div class="form-group mb-0">
+              <div class="input-group input-group-alternative input-group-merge">
+                <div class="input-group-prepend">
+                  <span class="input-group-text"><i class="fas fa-search"></i></span>
+                </div>
+                <input class="form-control" placeholder="Search" type="text">
+              </div>
+            </div>
+            <button type="button" class="close" data-action="search-close" data-target="#navbar-search-main" aria-label="Close">
+              <span aria-hidden="true">×</span>
+            </button>
+          </form>
+          <!-- Navbar links -->
+            
+        </div>
+      </div>
+      <br>
+    </nav>
+    <br>
+     <div style="margin-left: 10px;"><a href="patient_home">Home</a> / Self Care
+     </div>
+      
+      <br>
+    
+    <br>
+    <form action="{{url_for('selfcare_results')}}" method="POST">
+    <label for="cars" style="margin-left: 80px;">What are your symptoms</label>
+<select name="symptom" id="cars" style="margin-left: 80px;">
+  <option value="Cold">Cold</option>
+  <option value="Cough">Cough</option>
+  <option value="Fever">Fever</option>
+  <option value="Difficulty in Breathing">Difficulty in Breathing</option>
+</select>
+<br><br>
+<label for="description" style="margin-left: 30px;">Please describe your condition in short: </label>
+<input type="text" id="description" name="description" size="25" style="margin-left: 60px;">
+<br><br>
+<input type="submit" value="Submit" style="color: white;justify-content: center;background-color: #5e72e4; border-radius: 10px; border: none; margin-left: 145px;">
+
+    
+      <!-- Card footer -->
+    </form> 
+    </div>
+  </div>
+</div>
+  
+    <!-- Header -->
+    <!-- Header -->
+    
+  <!-- Argon Scripts -->
+  <!-- Core -->
+  <script src="../assets/vendor/jquery/dist/jquery.min.js"></script>
+  <script src="../assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/vendor/js-cookie/js.cookie.js"></script>
+  <script src="../assets/vendor/jquery.scrollbar/jquery.scrollbar.min.js"></script>
+  <script src="../assets/vendor/jquery-scroll-lock/dist/jquery-scrollLock.min.js"></script>
+  <!-- Optional JS -->
+  <script src="../assets/vendor/chart.js/dist/Chart.min.js"></script>
+  <script src="../assets/vendor/chart.js/dist/Chart.extension.js"></script>
+  <!-- Argon JS -->
+  <script src="../assets/js/argon.js?v=1.2.0"></script>
+</body>
+
+</html>

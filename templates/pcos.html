@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Start your development with a Dashboard for Bootstrap 4.">
+  <meta name="author" content="Creative Tim">
+  <title>PCOS Test Page</title>
+  <!-- Favicon -->
+  <link rel="icon" href="../assets/img/brand/favicon.png" type="image/png">
+  <!-- Fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">
+  <!-- Icons -->
+  <link rel="stylesheet" href="../assets/vendor/nucleo/css/nucleo.css" type="text/css">
+  <link rel="stylesheet" href="../assets/vendor/@fortawesome/fontawesome-free/css/all.min.css" type="text/css">
+  <!-- Page plugins -->
+  <!-- Argon CSS -->
+  <link rel="stylesheet" href="/static/argon.css?v=1.2.0" type="text/css">
+</head>
+
+<body>
+  <!-- Sidenav -->
+  <nav id="navbar-main" class="navbar navbar-horizontal navbar-transparent navbar-main navbar-expand-lg navbar-light">
+    <div class="container">
+      <!-- <a class="navbar-brand" href="dashboard.html">
+        <img src="../assets/img/brand/white.png">
+      </a> -->
+      <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button> -->
+      <div class="navbar-collapse navbar-custom-collapse collapse" id="navbar-collapse">
+        <div class="navbar-collapse-header">
+          <div class="row">
+            <div class="col-6 collapse-brand">
+              <a href="dashboard.html">
+              </a>
+            </div>
+            <div class="col-6 collapse-close">
+              <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+              </button>
+            </div>
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" href="dashboard.html">
+                  <i class="ni ni-tv-2 text-primary"></i>
+                  <span class="nav-link-text">Dashboard</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="ward.html">
+                  <i class="ni ni-planet text-orange"></i>
+                  <span class="nav-link-text">Classification of ward</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="daignosis.html">
+                  <i class="ni ni-pin-3 text-primary"></i>
+                  <span class="nav-link-text">Daignosis Suggestion</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="image.html">
+                  <i class="ni ni-single-02 text-yellow"></i>
+                  <span class="nav-link-text">Image Recognition</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="bed.html">
+                  <i class="ni ni-bullet-list-67 text-default"></i>
+                  <span class="nav-link-text">Bed Availability</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="patient_search.html">
+                  <i class="ni ni-key-25 text-info"></i>
+                  <span class="nav-link-text">Patient History</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>    
+        <div class="scrollbar-inner">
+      <!-- Brand -->
+     
+      
+          </ul>
+        </div>
+      </div>
+      <div style="justify-content: center;float: left;">
+        <p style="padding-right: 70vh; font-weight: bolder; color: white; font-size: 20px;">Kindly Care</p>
+      </div>
+    </div>
+    
+  </nav>
+  <!-- Main content -->
+  <div class="main-content" id="panel">
+    <!-- Topnav -->
+    <nav class="navbar navbar-top navbar-expand navbar-dark bg-primary border-bottom">
+      <div class="container-fluid">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+         
+        </div>
+      </div>
+      <br>
+    </nav>
+    <br>
+    <div style="margin-left: 10px;"><a href="hospital_home">Home</a> / PCOS Test
+<form action="{{url_for('pcos_diagnosis')}}" method="POST">
+    <div class="card-body">
+      <form>
+        <h6 class="heading-small text-muted mb-4">Polycystic ovary syndrome Parameters</h6>	 
+        <div class="pl-lg-">
+          <div class="row">
+            <div class="col-lg-4">
+              <div class="form-group">
+                <label class="form-control-label" for="input-username" > Age</label>
+                <input type="text" id="input-username" class="form-control" placeholder="Age(in years)"  name="age">
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="form-group">
+                <label class="form-control-label" for="input-email">BMI</label>
+                <input type="text" id="input-email" class="form-control" placeholder="BMI" name="BMI">
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="form-group">
+                <label class="form-control-label" for="input-email">Blood Group	Pulse</label>
+                <input type="text" id="input-email" class="form-control" placeholder="Blood Group	Pulse" name="Blood_Group_Pulse">
+              </div>
+            </div>
+          </div>
+          <div class="row">            		
+            <div class="col-lg-4">
+              <div class="form-group">
+                <label class="form-control-label" for="input-first-name">Rate</label>
+                <input type="text" id="input-first-name" class="form-control" placeholder="rate(bpm)"  name="rate">
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="form-group">
+                <label class="form-control-label" for="input-last-name"> RR </label>
+                <input type="text" id="input-last-name" class="form-control" placeholder="RR (breaths/min)"  name="RR">
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="form-group">
+                <label class="form-control-label" for="input-last-name">Hb</label>
+                <input type="text" id="input-last-name" class="form-control" placeholder="Hb(g/dl)"  name="Hb">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">	      
+          <div class="col-lg-4">
+            <div class="form-group">
+              <label class="form-control-label" for="input-first-name">	Cycle</label>
+              <input type="text" id="input-first-name" class="form-control" placeholder="Cycle(R/I) " name="Cycle">
+            </div>
+          </div>
+          <div class="col-lg-4">
+          <div class="form-group">
+            <label class="form-control-label" for="input-first-name"> Cycle length</label>
+            <input type="text" id="input-first-name" class="form-control" placeholder="Cycle length(days) "  name="Cyclelength">
+          </div>
+        </div>
+        <div class="col-lg-4">
+        <div class="form-group">
+          <label class="form-control-label" for="input-first-name">Pregnant</label>
+          <input type="text" id="input-first-name" class="form-control" placeholder="Pregnant(Y/N) "  name="Pregnant">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="pl-lg-" style="margin-left: 25px;margin-right: 25px;">
+    <div class="row">
+      <div class="col-lg-4">
+        <div class="form-group">
+          <label class="form-control-label" for="input-username" > No. of aborptions</label>
+          <input type="text" id="input-username" class="form-control" placeholder="No. of aborptions"  name="Noofaborptions">
+        </div>
+      </div>
+      <div class="col-lg-4">          
+        <div class="form-group">
+          <label class="form-control-label" for="input-email">I beta-HCG</label>
+          <input type="text" id="input-email" class="form-control" placeholder="I beta-HCG(mIU/mL)r" name="IbetaHCG">
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="form-group">
+          <label class="form-control-label" for="input-email">	II beta-HCG(mIU/mL)</label>
+          <input type="text" id="input-email" class="form-control" placeholder="II beta-HCG(mIU/mL)" name="IIbetaHCG">
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-4">
+        <div class="form-group">
+          <label class="form-control-label" for="input-first-name">	FSH</label>
+          <input type="text" id="input-first-name" class="form-control" placeholder="FSH(mIU/mL)" name="FSH">
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="form-group">        			
+          <label class="form-control-label" for="input-last-name">LH</label>
+          <input type="text" id="input-last-name" class="form-control" placeholder="LH(mIU/mL)"  name="LH">
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="form-group">
+          <label class="form-control-label" for="input-first-name">FSH/LH</label>
+          <input type="text" id="input-first-name" class="form-control" placeholder="FSH/LH " name="FSHLH">
+          </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row" style="margin: 10px;">
+
+    <div class="col-lg-4">
+      <div class="form-group">
+        <label class="form-control-label" for="input-first-name">Waist:Hip Ratio</label>
+        <input type="text" id="input-first-name" class="form-control" placeholder="Waist:Hip Ratio "  name="WaistHipRatio">  
+      </div>
+    </div>
+    <div class="col-lg-4">
+    <div class="form-group">
+      <label class="form-control-label" for="input-first-name">TSH </label>
+      <input type="text" id="input-first-name" class="form-control" placeholder="TSH (mIU/L) "  name="TSH">  
+    </div>
+  </div>
+  <div class="col-lg-4">	
+  <div class="form-group">
+    <label class="form-control-label" for="input-username" > AMH</label>
+    <input type="text" id="input-username" class="form-control" placeholder="AMH(ng/mL)"  name="AMH">
+  </div>
+</div>
+</div>
+</div>
+<div class="pl-lg-" style="margin: 25px;">
+  <div class="row">
+    <div class="col-lg-4">
+      <div class="form-group">
+        <label class="form-control-label" for="input-email">PRL</label>
+        <input type="text" id="input-email" class="form-control" placeholder="PRL(ng/mL)" name="PRL">
+      </div>
+    </div>
+    <div class="col-lg-4">
+      <div class="form-group">
+        <label class="form-control-label" for="input-email">	Vit D3 </label>
+        <input type="text" id="input-email" class="form-control" placeholder="Vit D3 (ng/mL)" name= "VitD3">
+      </div>
+    </div>
+    <div class="col-lg-4">
+      <div class="form-group">
+        <label class="form-control-label" for="input-first-name">	PRG</label>
+        <input type="text" id="input-first-name" class="form-control" placeholder="PRG(ng/mL)" name= "PRG">
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-4">
+      <div class="form-group">
+        <label class="form-control-label" for="input-last-name">	RBS</label>
+        <input type="text" id="input-last-name" class="form-control" placeholder="RBS(mg/dl)"  name= "RBS">		
+      </div>
+    </div>
+    <div class="col-lg-4">
+      <div class="form-group">
+        <label class="form-control-label" for="input-last-name">	Weight gain</label>
+        <input type="text" id="input-last-name" class="form-control" placeholder="Weight gain(Y/N)"  name="Weightgain">
+      </div>
+    </div>
+    <div class="col-lg-4">
+      <div class="form-group">
+        <label class="form-control-label" for="input-first-name">hair growth</label>
+        <input type="text" id="input-first-name" class="form-control" placeholder="hair growth(Y/N) "  name="hairgrowth">  
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row" style="margin: 10px;">
+
+  <div class="col-lg-4">
+    <div class="form-group">
+      <label class="form-control-label" for="input-first-name">Skin darkening</label>
+      <input type="text" id="input-first-name" class="form-control" placeholder="Skin darkening (Y/N) "  name="Skindarkening">  
+    </div>
+  </div>
+  <div class="col-lg-4">
+  <div class="form-group">
+    <label class="form-control-label" for="input-first-name">	Hair loss</label>
+    <input type="text" id="input-first-name" class="form-control" placeholder="Hair loss(Y/N) "  name= "Hairloss">  
+  </div>
+</div>
+<div class="col-lg-4">
+<div class="form-group">							
+  <label class="form-control-label" for="input-username" > 	Pimples(Y/N)</label>
+  <input type="text" id="input-username" class="form-control" placeholder="Pimples(Y/N)"  name= "Pimples">
+
+</div>
+</div>
+</div>
+</div>
+<div class="pl-lg-" style="margin: 25px;">
+  <div class="row">
+    <div class="col-lg-4">
+      <div class="form-group">
+        <label class="form-control-label" for="input-email">Reg.Exercise</label>
+        <input type="text" id="input-email" class="form-control" placeholder="Reg.Exercise(Y/N)" name="RegExercise">
+      </div>
+    </div>
+    <div class="col-lg-4">
+      <div class="form-group">
+        <label class="form-control-label" for="input-email">BP _Systolic</label>
+        <input type="text" id="input-email" class="form-control" placeholder="BP _Systolic (mmHg)" name="BP_Systolic">
+      </div>
+    </div>
+    <div class="col-lg-4">
+      <div class="form-group">
+        <label class="form-control-label" for="input-first-name">	BP _Diastolic </label>
+        <input type="text" id="input-first-name" class="form-control" placeholder="BP _Diastolic (mmHg)"  name="BP_Diastolic">
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-4">
+      <div class="form-group">
+        <label class="form-control-label" for="input-last-name">Follicle No. (L) </label>
+        <input type="text" id="input-last-name" class="form-control" placeholder="Follicle No. (L)"  name="FollicleNoL">
+      </div>
+    </div>
+    <div class="col-lg-4">
+      <div class="form-group">
+        <label class="form-control-label" for="input-last-name">Follicle No. (R)</label>
+        <input type="text" id="input-last-name" class="form-control" placeholder="Follicle No. (R)" name="FolliclenoR">
+      </div>
+    </div>
+    <div class="col-lg-4">
+      <div class="form-group">
+        <label class="form-control-label" for="input-last-name">Avg. F size (L)</label>
+        <input type="text" id="input-last-name" class="form-control" placeholder="Avg. F size (L) (mm)" name="AvgFsizeL">
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row" style="margin: 10px;">
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+  <div class="col-lg-4">
+    <div class="form-group">
+      <label class="form-control-label" for="input-first-name">Avg. F size (R) </label>
+      <input type="text" id="input-first-name" class="form-control" placeholder="Avg. F size (R) (mm)"  name="AvgFsizeR">
+    </div>
+  </div>
+  <div class="col-lg-4">
+  <div class="form-group">
+    <label class="form-control-label" for="input-first-name">Endometrium </label>
+    <input type="text" id="input-first-name" class="form-control" placeholder="Endometrium (mm) "  name="Endometrium">
+  </div>
+</div>
+<!-- <div class="col-lg-4">
+<div class="form-group">
+  <label class="form-control-label" for="input-first-name">Albumin</label>
+  <input type="text" id="input-first-name" class="form-control" placeholder="Albumin in g/dL " value="Albumin in g/dL" name="Albumin">
+</div>
+</div> -->
+</div>
+</div>
+    <hr class="my-4" />
+ 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+        
+        <input type="submit" value="Submit" style="justify-content: center;background-color: rgb(125, 119, 201); border-radius: 10px; box-shadow:2px 4px cadetblue; border: none; padding: 5px;padding-left: 15px;padding-right: 15px;"> 
+
+        <hr class="my-4" />
+  
+      </form>
+
+
+        <div style="margin-left: 610px; margin-bottom: 30px;"> <br> Result of the Test : <b>{{data}}</b> </div>
+
+  
+    <!-- Header -->
+    <!-- Header -->
+    
+  <!-- Argon Scripts -->
+  <!-- Core -->
+  <script src="../assets/vendor/jquery/dist/jquery.min.js"></script>
+  <script src="../assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/vendor/js-cookie/js.cookie.js"></script>
+  <script src="../assets/vendor/jquery.scrollbar/jquery.scrollbar.min.js"></script>
+  <script src="../assets/vendor/jquery-scroll-lock/dist/jquery-scrollLock.min.js"></script>
+  <!-- Optional JS -->
+  <script src="../assets/vendor/chart.js/dist/Chart.min.js"></script>
+  <script src="../assets/vendor/chart.js/dist/Chart.extension.js"></script>
+  <!-- Argon JS -->
+  <script src="../assets/js/argon.js?v=1.2.0"></script>
+</body>
+
+</html>
