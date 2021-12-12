@@ -21,7 +21,7 @@ Steps to Run the code:
 
 #Features
 
-#Doctor Interface:
+Doctor Interface:
 
 1. Classification of Ward: With this feature the doctor will be able to decide if the patient should go to “Mild Ward” or “ICU”. To predict this, we will be using powerful Machine Learning algorithms.
 
